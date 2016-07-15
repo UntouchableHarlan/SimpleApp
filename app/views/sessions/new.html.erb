@@ -1,0 +1,19 @@
+<h1>Login</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  <%= form_for(:session, url: login_path) do |login| %>
+      <%= login.label :email %>
+      <%= login.email_field :email, class: 'form-control' %>
+
+      <%= login.label :password %>
+      <%= login.password_field :password, class: 'form-control' %>
+
+      <%= login.submit "Log in", class: "btn btn-primary" %>
+    <% end %>
+      <br />
+    <p>
+      New User? <%= link_to 'Sign Up', signup_path %>
+    </p>
+  </div>
+</div>
