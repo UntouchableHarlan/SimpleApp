@@ -1,0 +1,11 @@
+<h1>Blog</h1>
+
+<p>
+  Hi, <%= @user.name %>,
+</p>
+
+<p>
+  Welcome to SaloApp. Click on the link below to activate you account
+</p>
+
+<%= edit_account_activation_url(@user.activation, email: @user.email) %>

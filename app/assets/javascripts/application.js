@@ -14,3 +14,10 @@
 // = require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+    $('.btn-success').click(function() {
+      $('.modal').fadeIn(1000)
+    })
+    // $('.modal').fadeIn(1000)
+});
