@@ -1,6 +1,6 @@
 class StaticController < ApplicationController
   def home
-    @user = User.new
+    @micropost = current_user.microposts.build 
   end
 
   def help

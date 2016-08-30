@@ -1,27 +1,20 @@
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
 <div class="jumbotron">
   <h1>Welcome</h1>
   <p>
     Welcome to the Home Page of my Website
   </p>
-  <%= link_to 'Sign Up', signup_path, remote: true, class: "btn btn-success", "data-toggle": "modal", "data-target": "#myModal"%>
+    <%= link_to 'Sign Up', signup_path, class: "btn btn-succes" %>
 </div>
-
-
-<!-- Modal -->
-<div id="myModal" class="modal" role="dialog">
-  <div class="modal-dialog">
-      <!--Modal Content-->
-      <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Sign Up</h4>
-          </div>
-
-
-          <div class="modal-body">
-            <%= render 'users/signup' %>
-          </div>
-
-      </div>
-  </div>
-</div>
+<% end %>
